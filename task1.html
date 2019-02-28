@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Task 1</title>
+	<style>
+		::-webkit-input-placeholder {color: blue;}    
+	</style>
+	<script>       
+		function output(num) {
+		let str = document.getElementById(num).value;
+		let words = "";
+		for (let i = 1; i <= str; i++) 
+			words+=(i+"cat...");			
+		let paragraph = document.createElement("p");
+		paragraph.innerHTML = words;
+		document.body.appendChild(paragraph);
+		}
+	</script>
+</head>
+<body>
+	<form name="form">
+	<input type="number" id="num"  required placeholder="Введите число:" autofocus=""/>
+	<input type="button" value="Отправить" onclick = "output('num');"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Task 2</title> 
+	<style>
+		::-webkit-input-placeholder {color: blue;}   
+		#num {width: 180px; margin: 1% 0%;}
+		.newDiv{ margin: 0px 2px; border: 2px solid silver;}
+	</style>
+	<script>       
+		function output(num) {
+		let str = document.getElementById(num).value;
+		if (str > 30 || str < 0){
+		alert( 'Введенное число не соответствует условию!' );
+		}
+		else{
+		for (let i = 1; i <= str; i++){
+			let newDiv_i = document.createElement('div');		
+			for (let j = 1; j <= str; j++){
+				let newDiv_j = document.createElement('div');
+				let size = str*10 + 'px';
+				newDiv_j.className = "newDiv";
+				newDiv_j.style.backgroundColor = randomColor();								
+				newDiv_j.style.width = size;
+				newDiv_j.style.height = size;
+				newDiv_j.style.display="inline-block";
+				newDiv_i.appendChild(newDiv_j);}
+				document.body.appendChild(newDiv_i);
+				}
+			}
+		}
+		function randomColor() {
+		r = Math.floor(Math.random() * (255)),
+		g = Math.floor(Math.random() * (255)),
+		b = Math.floor(Math.random() * (255));
+		return '#' + r.toString(16) + g.toString(16) + b.toString(16);
+		}
+	</script>
+</head> 
+<body>
+	<form name="form">
+	<input type="number" id="num" required placeholder="Введите число от 0 до 30:" autofocus="">
+	<input type="button" value="Отправить" onclick = "output('num');"/>
+	</form>
+</body>
+</html>

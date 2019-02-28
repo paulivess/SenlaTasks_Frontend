@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Task 4</title>
+	<script>		
+		function output(array,size) {
+			document.write("Вывод результата представлен в консоле вашего браузера. (нажмите F12 для просмотра.)");
+			let subarray = [];
+			for (let i = 0; i <Math.ceil(array.length/size); i++){
+				subarray[i] = array.slice((i*size), (i*size) + size);
+			}
+			console.log(subarray);
+			return subarray;
+		}
+	</script>
+</head>
+<body>
+	<form name="form">
+    <input type="button" value="Выполнить" onclick = "output([1, 2, 3, 4, 5, 6],2);"/>
+	</form>
+</body>
+</html>

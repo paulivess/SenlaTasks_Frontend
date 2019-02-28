@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Task 6</title>
+    <script>        
+		function output(array,element) {
+			document.write("Вывод результата представлен в консоле вашего браузера. (нажмите F12 для просмотра.)");
+			let max = array[0];
+			for (i = 0; i < array.length; ++i) {
+				if (array[i].length > max.length) max = array[i];
+			}	
+			let l = console.log;
+		    l(element.repeat(max.length + 4));
+		    array.forEach( s =>  l(element + ' ' + s.padEnd(max.length) + ' ' + element));   
+		    l(element.repeat(max.length + 4));
+		}
+    </script>
+</head>
+<body>
+	<form name="form">
+    <input type="button" value="Выполнить" onclick = "output(['Create', 'a', 'frame'], '+');"/>
+	</form>
+</body>
+</html>

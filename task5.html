@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Task 5</title>
+    <script>       
+		function output(array,element) {
+			document.write("Вывод результата представлен в консоле вашего браузера. (нажмите F12 для просмотра.)");
+			array.unshift(element);
+			array.sort(sort);
+			console.log(array[0]);				
+			return array[0];
+		}
+		function sort(a, b) {
+			if (a > b) return 1;
+			if (a < b) return -1;
+		}
+    </script>
+</head>
+<body>
+	<form name="form">
+    <input type="button" value="Выполнить" onclick = "output([1, 2, 3, 4],1.5);"/>
+	</form>
+</body>
+</html>

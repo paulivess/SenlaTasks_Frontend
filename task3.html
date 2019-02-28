@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Task 3</title>
+	<style>
+		::-webkit-input-placeholder {color: blue;} 
+	</style>
+	<script>       
+		function output(string) {
+		let str = document.getElementById(string).value;
+		let arr = str.split(' ');
+		let min = arr[0].length;
+		arr.forEach(function(word) {
+			if (word.length < min) min = word.length;
+			});
+			document.write("Длина самого короткого слова: " + min);
+		}	
+	</script>
+</head>
+<body>
+	<form name="form">
+	<input type="text" id="string" style="width:500px" required placeholder="Нажмите, чтобы написать:" autofocus="" />
+	<input type="button" value="Отправить" onclick = "output('string');"/>
+	</form>
+</body>
+</html>

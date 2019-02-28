@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Task 7</title>
+    <script>       
+		document.write("Вывод результата представлен в консоле вашего браузера. (нажмите F12 для просмотра.)");
+		function CreateHolder(num){	
+			this.getValue=function(){ return num};
+			this.setValue=function(){ num = 2 };
+		}
+		let num = 5;
+		let obj = new CreateHolder(num);
+		console.log(obj.getValue());
+		obj.setValue();
+		console.log(obj.getValue());		
+    </script>
+</head>
+<body>
+</body>
+</html>
